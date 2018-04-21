@@ -1,0 +1,24 @@
+<h1>Submit your quote</h1>
+<form novalidate>
+      <div class="form-group">
+        <label for="Name">Name:</label>
+        <input type="text" name="Name" required [(ngModel)]="newQuote.name" required class="form-control" #userName="ngModel" placeholder="Enter your name">
+        <div class="alert alert-danger" *ngIf="userName.errors?.required && userName.touched" > Please enter your name</div>
+      </div>
+      <div class="form-group">
+        <label for="Author">Author:</label>
+        <input type="text" name="author" required [(ngModel)]="newQuote.author" required class="form-control" #Author="ngModel" placeholder="Name of the author">
+        <div class="alert alert-danger" *ngIf="Author.errors?.required && Author.touched" > Please enter the name of the author</div>
+      </div>
+      <div class="form-group">
+        <label for="Quote">Quote:</label>
+        <input type="text" name="Quote" required [(ngModel)]="newQuote.quote" required class="form-control" #Quote="ngModel" placeholder="Please enter the Quote">
+        <div class="alert alert-danger" *ngIf="Quote.errors?.required && Quote.touched" > Please enter the Quote</div>
+      </div>
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" name="date" [(ngModel)]="newQuote.date" class="form-control" #date="ngModel" required>
+        <div class="alert alert-danger" *ngIf="date.errors?.required && date.touched" > Please enter a date</div>
+      </div>
+      <input type="submit" name="submit" value="submit" class="btn btn-info" (click)="onSubmit()">
+    </form>

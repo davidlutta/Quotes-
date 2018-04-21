@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="card-body">
+        <ul class="list-unstyled">
+          <div *ngFor="let quote of quotes; let i= index">
+            <div>
+            <p style="color:red" class="font-weight-bold float-right exit">X</p>
+            </div>
+            <li>{{ quote.quote }}</li>
+            <p><em>{{ quote.author }}</em></p>
+            <button class="btn btn-info btn-lg" (click)="onClick(i)">Show Details</button>
+            <div *ngIf="quote.showDetails">
+            <p>Added by {{ quote.name }}</p>
+            <p>Added {{ quote.date| dateCount }} days ago</p>
+            <app-vote></app-vote>
+            </div>
+            <hr>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div class="col-6">
+        <app-form></app-form>
+    </div>
+  </div>
+
+</div>
