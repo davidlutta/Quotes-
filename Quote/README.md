@@ -1,27 +1,20 @@
-# Quote
+# Quote Time
+#### This is a webapp for creating and reading for quotes, 22/04/2018
+#### By David Lutta
+## Description
+This is a web App made using Angular and users can enter and read Quotes and also like or dislike the quotes. Users can also submit New Quotes.
+## Setup/Installation Requirements
+* You need to run a server from your local machine using the ng serve command in the terminal.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Known Bugs
+The Submitted Quotes are not stored in a dataBase so any Submitted quotes can be updated in real Time
+## Technologies Used
+* HTML 5
+* CSS 3
+* TypeScript
+* Angular 5
+## Support and contact details
+You can contact me through my Git Hub for further improvements of my Web App.
+### License
+*MIT*
+Copyright (c) 2018 **David Lutta**

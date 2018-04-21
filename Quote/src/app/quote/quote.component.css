@@ -1,6 +1,7 @@
-.exit{
+.exit {
   font-size: 30px;
 }
-.exit:hover{
+
+.exit:hover {
   cursor: pointer;
 }
