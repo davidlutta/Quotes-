@@ -4,7 +4,7 @@
 
   <h1 class="text-center">Welcome to Quote Time</h1>
 
-  <h4 class="text-center"><em>Home to some of your favourite quotes</em></h4>
+  <h4 class="text-center"><em>Home to some of your "favourite quotes."</em></h4>
 
 </div>
 
@@ -12,47 +12,48 @@
 
   <div class="row">
 
+
     <div class="col-6">
 
-          <ul class="list-unstyled">
-
-            <div *ngFor="let quote of quotes; let i= index">
-
-              <div>
-
-                <p style="color:red" class="font-weight-bold float-right exit" (click)='quoteDelete(quote)'>X</p>
-
-              </div>
-
-              <li>{{ quote.quote }}</li>
-
-              <p><em>{{ quote.author }}</em></p>
-
-              <button class="btn btn-info btn-lg" (click)="onClick(i)">Show Details</button>
-
-              <div *ngIf="quote.showDetails">
-
-                <p>Added by {{ quote.name }}</p>
-
-                <p>Added {{ quote.date| dateCount }} days ago</p>
-
-                <!-- <app-vote></app-vote> -->
-
-                <button type="upVote" class="btn btn-info btn-sl" (click)="upVote()">Upvote</button>
-
-              </div>
-
-              <hr>
-
-            </div>
-
-          </ul>
+      <app-form (formComplete)="addNewQuote($event)"></app-form>
 
     </div>
 
-    <div class=".col-6">
+    <div class="col-6">
 
-      <app-form (formComplete)="addNewQuote($event)"></app-form>
+      <ul class="list-unstyled">
+
+        <div *ngFor="let quote of quotes; let i= index">
+
+          <div>
+
+            <p style="color:red" class="font-weight-bold float-right exit" (click)='quoteDelete(quote)'>X</p>
+
+          </div>
+
+          <li>{{ quote.quote }}</li>
+
+          <p><em>{{ quote.author }}</em></p>
+
+          <button class="btn btn-info btn-lg" (click)="onClick(i)">Show Details</button>
+
+          <div *ngIf="quote.showDetails">
+
+            <p>Added by {{ quote.name }}</p>
+
+            <p>Added {{ quote.date| dateCount }} days ago</p>
+
+            <app-vote></app-vote>
+
+            <!-- <button type="upVote" class="btn btn-info btn-sl" (click)="upVote()">Upvote</button> -->
+
+          </div>
+
+          <hr>
+
+        </div>
+
+      </ul>
 
     </div>
 
