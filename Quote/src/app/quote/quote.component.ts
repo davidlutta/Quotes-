@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import{ Form } from '../form';
+import { Quote } from '@angular/compiler';
 
 @Component({
   selector: 'app-quote',
@@ -12,6 +13,8 @@ export class QuoteComponent implements OnInit {
     new Form("Seth MacFarlane","Reba McEntire","To Succeed in Life one needs three things: a WishBone, a BackBone and a Funny Bone",new Date(2018,4,10), 0, 0),
     new Form("John Deere","Chris Rock","Behind every great man is a woman rolling her eyes",new Date(2018,4,10), 0, 0),
   ]
+
+  @Input() quoteVote:Quote;
 
   onClick(index){
     this.quotes[index].showDetails= !this.quotes[index].showDetails;

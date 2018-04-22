@@ -8,7 +8,7 @@
 
       <label for="Name">Name:</label>
 
-      <input type="text" name="Name" required [(ngModel)]="newQuote.name" required class="form-control" #userName="ngModel" placeholder="Enter your name">
+      <input type="text" name="Name" required [(ngModel)]="newQuote.name" required class="name" #userName="ngModel" placeholder="Enter your name">
 
       <div class="alert alert-danger" *ngIf="userName.errors?.required && userName.touched"> Please enter your name</div>
 

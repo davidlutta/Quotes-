@@ -43,8 +43,8 @@
 
             <p>Added {{ quote.date| dateCount }} days ago</p>
 
-            <app-vote></app-vote>
-
+            <app-vote (quoteVote)="quotes"></app-vote>
+             <!-- [quoteVote]="quote" -->
             <!-- <button type="upVote" class="btn btn-info btn-sl" (click)="upVote()">Upvote</button> -->
 
           </div>
