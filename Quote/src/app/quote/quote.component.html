@@ -8,6 +8,7 @@
 
 </div>
 
+
 <div class="container">
 
   <div class="row">
@@ -21,13 +22,17 @@
 
     <div class="col-6">
 
+      <div class="display">
+
+        <h2><strong>Quotes</strong></h2>
+
       <ul class="list-unstyled">
 
         <div *ngFor="let quote of quotes; let i= index">
 
           <div>
 
-            <p style="color:red" class="font-weight-bold float-right exit" (click)='quoteDelete(quote)'>X</p>
+            <p style="color:red; padding-left:10%" class="font-weight-bold float-right exit" (click)='quoteDelete(quote)'>X</p>
 
           </div>
 
@@ -37,15 +42,17 @@
 
           <button class="btn btn-info btn-lg" (click)="onClick(i)">Show Details</button>
 
+          <br>
+
+          <br>
+
           <div *ngIf="quote.showDetails">
 
             <p>Added by {{ quote.name }}</p>
 
             <p>Added {{ quote.date| dateCount }} days ago</p>
 
-            <app-vote (quoteVote)="quotes"></app-vote>
-             <!-- [quoteVote]="quote" -->
-            <!-- <button type="upVote" class="btn btn-info btn-sl" (click)="upVote()">Upvote</button> -->
+            <app-vote></app-vote>
 
           </div>
 
@@ -54,6 +61,8 @@
         </div>
 
       </ul>
+
+      </div>
 
     </div>
 

@@ -5,3 +5,27 @@
 .exit:hover {
   cursor: pointer;
 }
+.display{
+  background-color: #d2dcdd;
+  border-radius: 20px;
+  padding: 10%;
+  font-family: 'Ubuntu', sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: auto;
+}
+.display:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+.jumbotron{
+  background-color: #1a70ad;
+  color: white;
+  font-size: 50px;
+  font-family: 'Anton', sans-serif;
+}
+button{
+  background-color: #1a70ad;
+  border-radius: 20px;
+}
+button:hover{
+  background-color: #17618e;
+}
