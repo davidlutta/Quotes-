@@ -16,11 +16,6 @@ export class VoteComponent implements OnInit {
   onDownVote() {
     return this.count2 += 1;
   }
-  highlight(count, count2){
-    if(count >= 100){
-      console.log("Wow");
-    }
-  }
   constructor() { }
 
   ngOnInit() {
